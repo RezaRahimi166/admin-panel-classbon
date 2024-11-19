@@ -1,7 +1,11 @@
+import Login from "./features/identity/components/login";
+import Register from "./features/identity/components/register";
+
 function App() {
   return (
     <>
-      <p>پلتفرم آموزش آنلاین</p>
+      {/* <Login /> */}
+      <Register />
     </>
   );
 }
