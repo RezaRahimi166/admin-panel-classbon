@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { httpService } from "../../../core/http-service";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 const Register = () => {
   const {
     register,
@@ -19,8 +20,11 @@ const Register = () => {
     watch,
   } = useForm();
 
-  // submiting manualy
+  // locales
 
+  const { t } = useTranslation();
+
+  // submiting manualy
   const submitForm = useSubmit();
 
   const onSubmit = (data) => {
@@ -145,7 +149,8 @@ const Register = () => {
                   className="btn btn-lg btn-primary"
                   disabled={isSubmiting}
                 >
-                  {isSubmiting ? "درحال انجام..." : "ثبت نام کنید"}
+                  {t("register.register")}
+                  {/* {isSubmiting ? "درحال انجام..." : "ثبت نام کنید"} */}
                 </button>
               </div>
               {isSuccessOperation && (
