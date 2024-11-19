@@ -106,7 +106,7 @@
 // export default Register;
 
 import logo from "@assets/images/logo.svg";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Register = () => {
   return (
     <>
@@ -118,9 +118,9 @@ const Register = () => {
         </p>
         <p className="lead">
           قبلا ثبت نام کرده اید؟
-          <a href="/login" className="me-2">
+          <Link to="/login" className="me-2">
             وارد شوید{" "}
-          </a>
+          </Link>
         </p>
       </div>
 
