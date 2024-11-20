@@ -2,6 +2,8 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Course from "./Course";
 
+// way-1
+// const CourseList = ({ courses }) => {
 const CourseList = () => {
   const loadedCourses = useLoaderData();
 

@@ -6,6 +6,7 @@ import Register, {
 import IdentityLayout from "./layouts/identity-layout";
 import Courses, { coursesLoader } from "./pages/courses";
 import MainLayout from "./layouts/mainLayout/main-layout";
+import CourseCategories from "./pages/course-categories";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
         element: <Courses />,
         index: true,
         loader: coursesLoader,
+      },
+      {
+        path: "/course-categories",
+        element: <CourseCategories />,
       },
     ],
   },
