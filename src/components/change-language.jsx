@@ -10,6 +10,10 @@ const ChangeLanguage = () => {
 
   const { language, changeLanguage } = useAppContext();
 
+  useEffect(() => {
+    setShow(false);
+  }, [language]);
+
   const checkIfClickOutSide = (e) => {
     if (show && ref.current && !ref.current.contains(e.target)) {
       setShow(false);
@@ -39,7 +43,7 @@ const ChangeLanguage = () => {
         }`}
       >
         <a
-          className="dropdown-item fw-bolder d-flex align-items-center gap-2"
+          className="dropdown-item fw-bolder d-flex align-items-center gap-2x"
           style={{ textAlign: language === "fa" ? "right" : "left" }}
           onClick={() => changeLanguage("fa")}
         >
